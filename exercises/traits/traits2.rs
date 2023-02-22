@@ -19,6 +19,14 @@ trait AppendBar {
 
 // TODO: Implement trait `AppendBar` for a vector of strings.
 
+impl AppendBar for Vec<String> {
+    fn append_bar(mut self) -> Self {
+        let x = &mut vec!["Bar".to_string()];
+        self.append(x);
+        self
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
